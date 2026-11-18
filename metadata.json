@@ -1,0 +1,6 @@
+{
+  "name": "GIS — Program SKM Penjagaan Warga Emas",
+  "description": "Halaman panduan ibu bapa dan permohonan konsultasi Program SKM Penjagaan Warga Emas oleh Global Institute of Studies (GIS).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

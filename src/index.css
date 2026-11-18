@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --bg-canvas: #ffffff;
+    --bg-pale-teal: #eaf7f3;
+    --bg-cream: #fff9ef;
+    --text-heading: #21495b;
+    --text-body: #254451;
+    --accent-teal: #127e79;
+    --accent-teal-hover: #0e6662;
+  }
+
+  html {
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-body);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #254451;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #21495b;
+    text-wrap: balance;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid #127e79;
+    outline-offset: 2px;
+  }
+}
+
+.font-mono-code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes heroFadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-stagger-1 {
+  animation: heroFadeSlide 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-stagger-2 {
+  animation: heroFadeSlide 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.hero-stagger-3 {
+  animation: heroFadeSlide 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.hero-stagger-4 {
+  animation: heroFadeSlide 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-stagger-1,
+  .hero-stagger-2,
+  .hero-stagger-3,
+  .hero-stagger-4 {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
